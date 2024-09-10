@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Booking</title>
+    <link rel="stylesheet" type="text/css" href="../public/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/create">Create Bookings</a>
+        <a href="/users"> View Bookings</a>
+        <a href="users/modify">Modify Bookings</a>
+        <a href="users/del">Delete Bookings</a>
+        <a href="/about">About</a>
+        <a href="/help">Help</a>
+    </div>
+    <h1><%= message %></h1>
+    <div>
+        <p>Enter User Details for your booking below:</p>
+        <form method="POST" action="users/submit-form">
+            <input type="text" name="name" placeholder="Name">
+            <input type="text" name="email" placeholder="Email@xxx.com">
+            <input type="text" name="phone_no" placeholder="Phone Number">
+            <input type="date" name="date">
+            <br>
+            <h3>Card Details</h3>
+            <br>
+            <input type="text" name="card_no" placeholder="Card Number">
+            <input type="text" name="card_date" placeholder="Card Expiry(MM/YY)">
+            <input type="password" name="cvv" placeholder="Card CVV">
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

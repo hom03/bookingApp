@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify Bookings</title>
+    <link rel="stylesheet" type="text/css" href="../public/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/create">Create Bookings</a>
+        <a href="/users">View Bookings</a>
+        <a href="/users/modify">Modify Bookings</a>
+        <a href="/users/del">Delete Bookings</a>
+        <a href="/about">About</a>
+        <a href="/help">Help</a>
+    </div>
+    <h1>Modify Bookings</h1>
+    <p>This is a page for updating a booking</p>
+    <% if (users && users.length > 0) { %>
+        <% for (let i = 0; i < users.length; i++) { %>
+        <form method="POST" action="/users/modify/<%= users[i]._id %>">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<%= users[i].name %>" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" value="<%= users[i].email %>">
+            <br>
+            <label for="phone_no">Phone Number:</label>
+            <input type="text" id="phone_no" name="phone_no" value="<%= users[i].phone_no %>" required>
+            <br>
+            <label for="date">Booking Date:</label>
+            <input type="date" id="date" name="date" value="<%= users[i].date %>">
+            <br>
+            <label for="card_no">Card Number</label>
+            <input type="password" id="card_no" name="card_no" value="<%= users[i].card_no %>">
+            <br>
+            <label for="card_date">Card Expiry</label>
+            <input type="text" id="card_date" name="card_date" value="<%= users[i].card_date %>">
+            <br>
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" name="cvv" value="<%= users[i].cvv %>">
+            <br>
+            <button type="submit">Update Booking</button>
+        </form>
+        <br>
+        <% } %>
+        <% } else { %>
+            <p>No users available for modification.</p>
+        <% } %>
+</body>
+</html>

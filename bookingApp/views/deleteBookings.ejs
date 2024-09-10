@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Bookings</title>
+    <link rel="stylesheet" type="text/css" href="../public/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/create">Create Bookings</a>
+        <a href="/users">View Bookings</a>
+        <a href="/users/modify">Modify Bookings</a>
+        <a href="/users/del">Delete Bookings</a>
+        <a href="/about">About</a>
+        <a href="/help">Help</a>
+    </div>
+    <h1>Delete Bookings</h1>
+    <p>This a page for deleting bookings</p>
+        <form method="POST" action="/users/del">
+        <label for="selectedUser">Select Booking to Delete:</label>
+        <select id="selectedUser" name="selectedUser" required>
+            <% users.forEach(user => { %>
+                <option value="<%= user.name %>"><%= user.name %></option>
+            <% }); %>
+        </select>
+        <br>
+        <button type="submit">Delete User's Bookings</button>
+    </form>
+</body>
+</html>

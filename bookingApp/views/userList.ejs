@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookings</title>
+    <link rel="stylesheet" type="text/css" href="../public/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/create">Create Bookings</a>
+        <a href="/users">View Bookings</a>
+        <a href="users/modify">Modify Bookings</a>
+        <a href="users/del">Delete Bookings</a>
+        <a href="/about">About</a>
+        <a href="/help">Help</a>
+    </div>
+    <h1>Bookings</h1>
+    <h2>Name  -  Email  - Phone Number - Booking Date</h2>
+    <ul>
+    <% users.forEach(user => { %>
+    <li><%= user.name%> - <%= user.email%> - <%= user.phone_no%> - <%= user.date%></li>
+    <br>
+    <% }); %>
+    </ul>
+</body>
+</html>

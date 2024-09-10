@@ -1,0 +1,70 @@
+/* styles.css */
+body{
+     background-image: url("../public/images/shot.jpg"); 
+    background-size: cover;
+    background-attachment: fixed;
+}
+h1 {
+    color:aqua;
+    font-family: 'Monospace','Monaco';
+    text-decoration: underline;
+    font-size: 40px;
+}
+p {
+    color:purple;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+.navbar {
+    background-color: blue;
+    overflow: hidden;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: black;
+}
+div p{
+    color: navy;
+
+    font-weight: bold;
+}
+li {
+    color:navy;
+    font-size: 20px;
+}
+.button {
+    background-color: green;
+    border: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+h2 {
+    color:crimson;
+    text-decoration: underline;
+}
+h3 {
+    color: green;
+    text-decoration: dotted;
+}
+.flex-container {
+    display: flex;
+  }
+form button {
+    background-color: red;
+    font-size: 20px;
+    border-radius: 8px;
+    color:white;
+}

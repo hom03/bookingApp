@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help</title>
+    <link rel="stylesheet" type="text/css" href="../public/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/create">Create Bookings</a>
+        <a href="/users"> View Bookings</a>
+        <a href="users/modify">Modify Bookings</a>
+        <a href="users/del">Delete Bookings</a>
+        <a href="/about">About</a>
+        <a href="/help">Help</a>
+    </div>
+    <h1><%= message %></h1>
+    <div>
+        <p>I want to make a booking</p>
+        <a href="/create"><button class="button">Make a booking today</button></a>
+    </div>
+    <br>
+    <div>
+        <p>I want to view bookings</p>
+        <a href="/users"><button class="button">View bookings</button></a>
+    </div>
+    <br>
+    <div>
+        <p>I want to update a booking</p>
+        <a href="/users/modify"><button class="button">Update a booking</button></a>
+    </div>
+    <br>
+    <div>
+        <p>I want to delete a booking</p>
+        <a href="/users/del"><button class="button">Delete a booking</button></a>
+    </div>
+    <br>
+    <div>
+        <p>I want to know more</p>
+        <a href="/about"><button class="button">About</button></a>
+    </div>
+</body>
+</html>
